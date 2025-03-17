@@ -5,64 +5,117 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link href="style.css" rel="stylesheet"/>
+        
     </head>
     <body>
+        
         <header><h1>Gallery</h1></header>
         <main>
-                <figure id="fma" class="fma-modal"><img src="/project/assets/elric-brothers.jpg" width="400px"/><figcaption>Fullmetal Alchemist</figcaption></figure>
-                <figure id="hxh" class="hxh-modal"><img src="/project/assets/gon-freecss-neon.png" width="400px"/><figcaption>Hunter x Hunter</figcaption></figure>
-                <figure id="berserk" class="berserk-modal"><img src="/project/assets/guts-artwork.jpg" width="400px"/><figcaption>Berserk</figcaption></figure>
-                <figure id="naruto" class="naruto-modal"><img src="/project/assets/itachi-uchiha-pose.png" width="400px"/><figcaption>Naruto Shippuden</figcaption></figure>
-                <figure id="kaiju" class="kaiju-modal"><img src="/project/assets/kaiju-no-8-monster.jpg" width="400px"/><figcaption>Kaiju No. 8</figcaption></figure>
-                <figure id="dan" class="dan-modal"><img src="/project/assets/ken-takakura-red.png" width="400px"/><figcaption>Dandadan</figcaption></figure>
-                <figure id="opm" class="opm-modal"><img src="/project/assets/saitama-season-3.jpg" width="400px"/><figcaption>One Punch Man</figcaption></figure>
-                <figure id="jjk" class="jjk-modal"><img src="/project/assets/sukuna-red.jpg" width="400px"/><figcaption>Jujutsu Kaisen</figcaption></figure>
+                <figure id="fma" class="fma-modal"><img src="/project/assets/elric-brothers.jpg" /><figcaption>Fullmetal Alchemist</figcaption></figure>
+                <figure id="hxh" class="hxh-modal"><img src="/project/assets/gon-freecss-neon.png"/><figcaption>Hunter x Hunter</figcaption></figure>
+                <figure id="berserk" class="berserk-modal"><img src="/project/assets/guts-artwork.jpg"/><figcaption>Berserk</figcaption></figure>
+                <figure id="naruto" class="naruto-modal"><img src="/project/assets/itachi-uchiha-pose.png"/><figcaption>Naruto Shippuden</figcaption></figure>
+                <figure id="kaiju" class="kaiju-modal"><img src="/project/assets/kaiju-no-8-monster.jpg"/><figcaption>Kaiju No. 8</figcaption></figure>
+                <figure id="dan" class="dan-modal"><img src="/project/assets/ken-takakura-red.png"/><figcaption>Dandadan</figcaption></figure>
+                <figure id="opm" class="opm-modal"><img src="/project/assets/saitama-season-3.jpg"/><figcaption>One Punch Man</figcaption></figure>
+                <figure id="jjk" class="jjk-modal"><img src="/project/assets/sukuna-red.jpg"/><figcaption>Jujutsu Kaisen</figcaption></figure>
 
-                <div id="myModal" class="modal">
-
+                <div id="fmaModal" class="modal">
                 <div class="fma-modal-content">
                     <span class="close">&times;</span>
-                    <p>Fullmetal Alchemist: Brotherhood" follows the Elric brothers, Edward and Alphonse, as they seek to restore their bodies after a failed attempt to resurrect their mother through alchemy, leading them on a journey involving the military, the Philosopher's Stone, and a larger conspiracy. 
+                    <img id="img-content" src="/project/assets/elric-brothers.jpg"/>
+                    <p>Fullmetal Alchemist: Brotherhood" follows the Elric brothers, Edward and Alphonse, 
+                    as they seek to restore their bodies after a failed attempt to resurrect their mother through alchemy,
+                    leading them on a journey involving the military, the Philosopher's Stone, and a larger conspiracy. 
                     </p>
+                    <button id="prev_button">Prev</button>
+                    <button id="next_button">Next</button>
+                </div>
                 </div>
 
+                <div id="hxhModal" class="modal">
                 <div class="hxh-modal-content">
                     <span class="close">&times;</span>
-                    <p>Hunter x Hunter" follows Gon Freecss's journey to become a Hunter, a licensed professional who undertakes fantastical pursuits, and find his father, a legendary Hunter who left him at a young age.</p>
+                    <img id="img-content" src="/project/assets/gon-freecss-neon.png"/>
+                    <p>Hunter x Hunter" follows Gon Freecss's journey to become a Hunter,
+                    a licensed professional who undertakes fantastical pursuits, and find his father, 
+                    a legendary Hunter who left him at a young age.</p>
+                    <button id="next_button">Next</button>
+                    <button id="prev_button">Prev</button>
+                </div>
                 </div>
 
+                <div id="berserk-modal" class="modal">
                 <div class="berserk-modal-content">
                     <span class="close">&times;</span>
-                    <p>Berserk" is a dark fantasy manga series by Kentaro Miura that follows Guts, a mercenary warrior, as he battles against his grim fate and the supernatural forces that haunt him, seeking revenge and to save his lover</p>
+                    <img id="img-content" src="/project/assets/guts-artwork.jpg"/>
+                    <p>Berserk" is a dark fantasy manga series by Kentaro Miura that follows Guts, a mercenary warrior, 
+                        as he battles against his grim fate and the supernatural forces that haunt him, 
+                        seeking revenge and to save his lover</p>
+                    <button id="next_button">Next</button>
+                    <button id="prev_button">Prev</button>
+                </div>
                 </div>
 
+                <div id="naruto-modal" class="modal">
                 <div class="naruto-modal-content">
                     <span class="close">&times;</span>
-                    <p>Naruto: Shippuden" follows the teenage ninja Naruto Uzumaki and his allies as they face a greater threat, the Akatsuki organization, and the looming Fourth Shinobi World War.</p>
+                    <img id="img-content" src="/project/assets/itachi-uchiha-pose.png"/>
+                    <p>Naruto: Shippuden" follows the teenage ninja Naruto Uzumaki and his allies as they face a greater threat, 
+                        the Akatsuki organization, and the looming Fourth Shinobi World War.</p>
+                    <button id="next_button">Next</button>
+                    <button id="prev_button">Prev</button>
+                </div>
                 </div>
 
+                <div id="kaiju-modal" class="modal">
                 <div class="kaiju-modal-content">
                     <span class="close">&times;</span>
-                    <p>Kafka Hibino, a regular guy who cleans up after Kaiju attacks, unexpectedly gains the ability to transform into a Kaiju himself, becoming "Kaiju No. 8," and he strives to join the Defense Force to fight alongside his childhood friend, Mina Ashiro. </p>
+                    <img id="img-content" src="/project/assets/kaiju-no-8-monster.jpg"/>
+                    <p>Kafka Hibino, a regular guy who cleans up after Kaiju attacks, unexpectedly gains the ability to transform into a Kaiju himself, 
+                        becoming "Kaiju No. 8," and he strives to join the Defense Force to fight alongside his childhood friend, Mina Ashiro. </p>
+                    <button id="next_button">Next</button>
+                    <button id="prev_button">Prev</button>
+                </div>
                 </div>
 
+                <div id="dan-modal" class="modal">
                 <div class="dan-modal-content">
                     <span class="close">&times;</span>
-                    <p>follows Momo Ayase, who believes in spirits, and Okarun, a UFO fanatic, as they initially argue over the existence of supernatural beings but end up proving each other right through paranormal battles and a blossoming romance. </p>
+                    <img id="img-content" src="/project/assets/ken-takakura-red.png"/>
+                    <p>follows Momo Ayase, who believes in spirits, and Okarun, a UFO fanatic, 
+                        as they initially argue over the existence of supernatural beings but end up proving each other 
+                        right through paranormal battles and a blossoming romance.</p>
+                    <button id="next_button">Next</button>
+                    <button id="prev_button">Prev</button>
+                </div>
                 </div>
 
+                <div id="opm-modal" class="modal">
                 <div class="opm-modal-content">
                     <span class="close">&times;</span>
-                    <p>One-Punch Man" follows Saitama, a superhero who can defeat any enemy with a single punch, leading him to a life of boredom and a search for a worthy opponent.</p>
+                    <img id="img-content" src="/project/assets/saitama-season-3.jpg"/>
+                    <p>One-Punch Man" follows Saitama, a superhero who can defeat any enemy with a single punch, 
+                        leading him to a life of boredom and a search for a worthy opponent.</p>
+                    <button id="next_button">Next</button>
+                    <button id="prev_button">Prev</button>
+                </div>
                 </div>
 
+                <div id="jjk-modal" class="modal">
                 <div class="jjk-modal-content">
                     <span class="close">&times;</span>
-                    <p></p>
+                    <img id="img-content" src="/project/assets/sukuna-red.jpg"/>
+                    <p>The story follows high school student Yuji Itadori as he joins a secret organization of Jujutsu Sorcerers to 
+                        eliminate a powerful Curse named Ryomen Sukuna, of whom Yuji becomes the host</p>
+                    <button id="next_button">Next</button>
+                    <button id="prev_button">Prev</button>
                 </div>
                 </div>
+                
              
         </main>
         <footer><p>Bongithemba Radebe</p></footer>
+        <script src="script.js"></script>
     </body>
 </html>
