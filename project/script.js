@@ -1,91 +1,56 @@
+let currentPhotoIndex = 0;
+const photos = [
+  { src: '/project/assets/elric-brothers.jpg', caption: `"Fullmetal Alchemist: Brotherhood" follows the alchemist brothers, Edward and Alphonse Elric, as they search for the Philosopher's Stone after a failed attempt to resurrect their mother, which results in them losing their bodies` },
+  { src: '/project/assets/gon-freecss-neon.png', caption: `Hunter x Hunter follows Gon Freecss's journey to become a Hunter 
+  a licensed professional who undertakes fantastical pursuits, and find his father, 
+  a legendary Hunter who left him at a young age.` },
+  { src: '/project/assets/guts-artwork.jpg', caption: `Berserk" is a dark fantasy manga series by Kentaro Miura that follows Guts, a mercenary warrior, 
+  as he battles against his grim fate and the supernatural forces that haunt him, 
+  seeking revenge and to save his lover` },
+  { src: '/project/assets/itachi-uchiha-pose.png', caption: `Naruto: Shippuden" follows the teenage ninja Naruto Uzumaki and his allies as they face a greater threat, 
+  the Akatsuki organization, and the looming Fourth Shinobi World War.` },
+  { src: '/project/assets/kaiju-no-8-monster.jpg', caption: `Kafka Hibino, a regular guy who cleans up after Kaiju attacks, unexpectedly gains the ability to transform into a Kaiju himself, 
+  becoming "Kaiju No. 8," and he strives to join the Defense Force to fight alongside his childhood friend, Mina Ashiro.` },
+  { src: '/project/assets/ken-takakura-red.png', caption: `follows Momo Ayase, who believes in spirits, and Okarun, a UFO fanatic, 
+  as they initially argue over the existence of supernatural beings but end up proving each other 
+  right through paranormal battles and a blossoming romance.` },
+  { src: '/project/assets/saitama-season-3.jpg', caption: `One-Punch Man" follows Saitama, a superhero who can defeat any enemy with a single punch, 
+  leading him to a life of boredom and a search for a worthy opponent.` },
+  { src: '/project/assets/sukuna-red.jpg', caption: `The story follows high school student Yuji Itadori as he joins a secret organization of Jujutsu Sorcerers to 
+  eliminate a powerful Curse named Ryomen Sukuna, of whom Yuji becomes the host.` },
+];
+
+
 // Get the modal
-var fmamodal = document.getElementById("fmaModal");
-var hxhModal = document.getElementById("hxhModal");
-var berserkModal = document.getElementById("berserk-modal");
-var narutoModal = document.getElementById("naruto-modal");
-var kaijuModal = document.getElementById("kaiju-modal");
-var danModal = document.getElementById("dan-modal");
-var opmModal = document.getElementById("opm-modal");
-var jjkModal = document.getElementById("jjk-modal");
+function openModal(index) {
+  currentPhotoIndex = index;
+  const modal = document.getElementById('modal');
+  const modalImage = document.getElementById('modal-image');
+  const modalCaption = document.getElementById('modal-caption');
 
-// Get the button that opens the modal
-var fma = document.getElementById("fma");
-var hxh = document.getElementById("hxh");
-var berserk = document.getElementById("berserk");
-var naruto = document.getElementById("naruto");
-var kaiju = document.getElementById("kaiju");
-var dan = document.getElementById("dan");
-var opm = document.getElementById("opm");
-var jjk = document.getElementById("jjk");
-
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-fma.onclick = function() {
-  fmamodal.style.display = "block";
-}
-hxh.onclick = function() {
-  hxhModal.style.display = "block";
-}
-berserk.onclick = function() {
-  berserkModal.style.display = "block";
-}
-naruto.onclick = function() {
-  narutoModal.style.display = "block";
-}
-kaiju.onclick = function() {
-  kaijuModal.style.display = "block";
-}
-dan.onclick = function() {
-  danModal.style.display = "block";
-}
-opm.onclick = function() {
-  opmModal.style.display = "block";
-}
-jjk.onclick = function() {
-  jjkModal.style.display = "block";
+  modalImage.src = photos[index].src;
+  modalCaption.textContent = photos[index].caption;
+  modal.style.display = 'block';
 }
 
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  fmamodal.style.display = "none";
-  hxhModal.style.display = "none";
-  berserkModal.style.display = "none";
-  narutoModal.style.display = "none";
-  kaijuModal.style.display = "none";
-  danModal.style.display = "none";
-  opmModal.style.display = "none";
-  jjkModal.style.display = "none";
-
+function closeModal() {
+  document.getElementById('modal').style.display = 'none';
 }
 
-// When the user clicks anywhere outside of the modal, close it
+function changePhoto(direction) {
+  currentPhotoIndex += direction;
+  if (currentPhotoIndex < 0) currentPhotoIndex = photos.length - 1;
+  if (currentPhotoIndex >= photos.length) currentPhotoIndex = 0;
+
+  const modalImage = document.getElementById('modal-image');
+  const modalCaption = document.getElementById('modal-caption');
+
+  modalImage.src = photos[currentPhotoIndex].src;
+  modalCaption.textContent = photos[currentPhotoIndex].caption;
+}
+
 window.onclick = function(event) {
-  if (event.target == fmamodal) {
-    fmamodal.style.display = "none";
-  }
-  if (event.target == hxhModal) {
-    hxhModal.style.display = "none";
-  }
-  if (event.target == berserkModal) {
-    berserkModal.style.display = "none";
-  }
-  if (event.target == narutoModal) {
-    narutoModal.style.display = "none";
-  }
-  if (event.target == kaijuModal) {
-    kaijuModal.style.display = "none";
-  }
-  if (event.target == danModal) {
-    danModal.style.display = "none";
-  }
-  if (event.target == opmModal) {
-    opmModal.style.display = "none";
-  }
-  if (event.target == jjkModal) {
-    jjkModal.style.display = "none";
+  if (event.target == modal) {
+    modal.style.display = "none";
   }
 }
