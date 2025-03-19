@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 
 body {
     background-color: darkslategrey;
@@ -13,44 +19,20 @@ header {
     position: sticky;
     top: -10px;
     height: 100px;
-    width: 100%;    
+    width: 100%;
+    margin: auto;   
 }
 
 #modal-image{
     width: 100%;
+    margin-left: 3px;
 }
 
-main {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin: auto;
-    align-self: auto;   
-}
-
-figure {
-    text-align: center;
-    color: azure;
-    font-size: 20px;
-    width: 400px;
-    
-}
 
 .buttons {
     text-align: center;
 }
 
-img {
-    border: 2px solid;
-    width: 400px;
-}
-
-img:hover {
-    border: 2px solid yellow;
-    cursor: pointer;
-    width: 500px;
-}
 
 footer  {
     text-align: center;
@@ -68,6 +50,7 @@ footer  {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
 }
 
 .modal-content {
@@ -93,27 +76,36 @@ footer  {
   cursor: pointer;
 }
 
-@media only screen and (max-width:375px) {
-
-    header {
-        width: 100%;
-    }
-
-    main {
-        display: flex;
-
-    }
-
-    img {
-        width: 200px;
-    }
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
 }
 
-@media only screen and (max-width:425px){
-    figure{
-        margin: auto;
-    }
+.photo {
+    margin: 10px;
+    flex: 1 1 calc(50% - 20px); /* two items per row */
+    max-width: calc(50% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
 }
+
+.photo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid white;
+}
+
+.photo img:hover {
+    border: 3px solid yellow;
+    cursor: pointer;
+}
+
 
 
 
