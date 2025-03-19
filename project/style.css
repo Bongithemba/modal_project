@@ -12,7 +12,8 @@ header {
     color: azure;
     position: sticky;
     top: -10px;
-    height: 100px;    
+    height: 100px;
+    width: 100%;    
 }
 
 #modal-image{
@@ -24,13 +25,16 @@ main {
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    margin: auto;   
+    margin: auto;
+    align-self: auto;   
 }
 
 figure {
     text-align: center;
     color: azure;
-    font-size: 20px
+    font-size: 20px;
+    width: 400px;
+    
 }
 
 .buttons {
@@ -59,7 +63,7 @@ footer  {
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
+    width: 100vw; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
@@ -89,6 +93,27 @@ footer  {
   cursor: pointer;
 }
 
+@media only screen and (max-width:375px) {
+
+    header {
+        width: 100%;
+    }
+
+    main {
+        display: flex;
+
+    }
+
+    img {
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width:425px){
+    figure{
+        margin: auto;
+    }
+}
 
 
 
